@@ -1,0 +1,31 @@
+{
+  "name": "react-with-typescript",
+  "version": "0.0.1",
+  "main": "src/index.tsx",
+  "author": "Loc Nguyen, lochnguyen@gmail.com",
+  "license": "ISC",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/history": "^4.5.0",
+    "@types/react": "^15.0.21",
+    "@types/react-dom": "^0.14.23",
+    "@types/react-hot-loader": "^3.0.1",
+    "@types/react-router": "^4.0.4",
+    "@types/react-router-dom": "^4.0.3",
+    "@types/webpack-env": "^1.13.0",
+    "awesome-typescript-loader": "^3.1.2",
+    "react-hot-loader": "next",
+    "source-map-loader": "^0.2.1",
+    "typescript": "^2.2.2",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
