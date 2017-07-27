@@ -13,8 +13,8 @@ export class LoginForm extends React.Component<any, any> {
                     <input type="password" />
                 </div>
             </form>
-        )
-    };
+        );
+    }
 }
 
 export default LoginForm;

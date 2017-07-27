@@ -1,7 +1,6 @@
 # react-with-typescript
 
-A super minimal starter project that has no opinions on how you do CSS, state management, testing, or data fetching. Its only position 
-is react-router, webpack, react-hot-loader v3, and of course TypeScript.
+A super minimal starter project that has no opinions on how you do CSS, state management, testing, or data fetching. Its only position is prettier, react-router, webpack, react-hot-loader v3, and of course TypeScript.
 
 ## Usage 
 1. `npm install` or `yarn` to install 3rd party dependencies
