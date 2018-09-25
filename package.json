@@ -1,6 +1,6 @@
 {
   "name": "react-with-typescript",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "main": "src/index.tsx",
   "author": "Loc Nguyen, lochnguyen@gmail.com",
   "license": "MIT",
