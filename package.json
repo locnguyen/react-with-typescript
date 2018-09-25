@@ -4,9 +4,15 @@
   "main": "src/index.tsx",
   "author": "Loc Nguyen, lochnguyen@gmail.com",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/locnguyen/react-with-typescript"
+  },
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js",
-    "prettier": "prettier --parser typescript --single-quote --trailing-comma none --tab-width 2 --print-width 120 --write \"./**/*.tsx\""
+    "prettier": "prettier \"src/**/*.{ts,tsx,js,jsx}\"",
+    "prettier:check": "npm run prettier -- --list-different",
+    "prettier:write": "npm run prettier -- --write"
   },
   "dependencies": {
     "react": "^16.5.2",
@@ -32,7 +38,7 @@
     "source-map-loader": "^0.2.1",
     "ts-loader": "^5.2.0",
     "typescript": "^3.0.3",
-    "webpack": "^4.19.1",
+    "webpack": "^4.20.1",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.9"
   }
