@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js",
-    "prettier": "prettier --parser typescript --single-quote --trailing-comma none --tab-width 4 --print-width 120 --write \"./**/*.tsx\""
+    "prettier": "prettier --parser typescript --single-quote --trailing-comma none --tab-width 2 --print-width 120 --write \"./**/*.tsx\""
   },
   "dependencies": {
     "react": "^16.5.2",
@@ -15,19 +15,25 @@
     "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
-    "@types/webpack-env": "^1.13.0",
-    "awesome-typescript-loader": "^3.1.2",
-    "react-hot-loader": "next",
+    "@babel/core": "^7.1.0",
     "@types/history": "^4.7.0",
+    "@types/node": "^10.11.0",
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
     "@types/react-hot-loader": "^4.1.0",
     "@types/react-router": "^4.0.31",
     "@types/react-router-dom": "^4.3.1",
+    "@types/webpack-env": "^1.13.6",
+    "babel-loader": "^8.0.2",
+    "fork-ts-checker-webpack-plugin": "^0.4.9",
+    "html-webpack-plugin": "^3.2.0",
     "prettier": "^1.14.3",
+    "react-hot-loader": "^4.3.11",
     "source-map-loader": "^0.2.1",
+    "ts-loader": "^5.2.0",
     "typescript": "^3.0.3",
-    "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.2"
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9"
   }
 }
