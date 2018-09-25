@@ -1,0 +1,10 @@
+{
+  "rulesDirectory": ["./node_modules/tslint-microsoft-contrib"],
+  "extends": "tslint-microsoft-contrib",
+  "rules": {
+    "quotemark": [true, "single", "jsx-double"],
+    "no-relative-imports": false,
+    "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
+    "completed-docs": false
+  }
+}

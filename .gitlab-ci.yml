@@ -23,7 +23,7 @@ install_dependencies:
   script:
     - npm install
   after_script:
-    - tsc -v
+    - ./node_modules/.bin/tsc -v
 
 do_format_check:
   stage: stylecheck
@@ -31,3 +31,10 @@ do_format_check:
     - npm install
   script:
     - npm run prettier:check
+
+do_lint_check:
+  stage: stylecheck
+  before_script:
+    - npm install
+  script:
+    - npm run lint
