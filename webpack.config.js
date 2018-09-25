@@ -1,25 +1,28 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
-    entry: [
-        'react-hot-loader/patch',
-        'webpack-dev-server/client?http://localhost:8080',
-        'webpack/hot/only-dev-server',
-        './src/index.tsx',
-    ], 
+    mode: 'development',
+
+    context: path.resolve(__dirname),
+
+    entry: './src/index.tsx',
+
     output: {
         filename: 'bundle.js',
         path: path.join(__dirname, 'dist'),
-        publicPath: '/static'
+        publicPath: '/'
     },
 
     devServer: {
         port: 8080,
+        compress: true,
         hot: true,
-        contentBase: __dirname,
-        publicPath: '/static',
-        historyApiFallback: true
+        historyApiFallback: true,
+        contentBase: path.join(__dirname, 'dist'),
+        publicPath: '/'
     },
 
     // Enable sourcemaps for debugging webpack's output.
@@ -35,20 +38,34 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                loaders: ['react-hot-loader/webpack', 'awesome-typescript-loader']
+                use: [
+                    'babel-loader',
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            transpileOnly: true
+                        }
+                    }
+                ],
+                exclude: [/node_modules/]
             },
 
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
             {
                 enforce: 'pre',
                 test: /\.js$/,
-                loader: 'source-map-loader'
+                use: 'source-map-loader'
             }
         ]
     },
 
     plugins: [
+        new ForkTsCheckerWebpackPlugin(),
+        new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NamedModulesPlugin()
+        new HtmlWebpackPlugin({
+            title: 'react-with-typescript',
+            template: 'src/index.html'
+      })
     ]
 };
