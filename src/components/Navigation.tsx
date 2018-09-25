@@ -1,9 +1,13 @@
-import * as React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import LoginForm from './LoginForm';
-import Home from './Home';
+/**
+ *
+ */
 
-const Navigation = () => (
+import * as React from 'react';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { Home } from './Home';
+import { LoginForm } from './LoginForm';
+
+const Navigation: React.SFC = (): React.ReactElement<{}> => (
   <nav>
     <Router>
       <div>
@@ -24,4 +28,4 @@ const Navigation = () => (
   </nav>
 );
 
-export default Navigation;
+export { Navigation };

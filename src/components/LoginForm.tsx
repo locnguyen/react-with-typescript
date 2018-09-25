@@ -1,7 +1,11 @@
+/**
+ *
+ */
+
 import * as React from 'react';
 
-export class LoginForm extends React.Component<{}, {}> {
-  render() {
+class LoginForm extends React.Component {
+  public render(): React.ReactNode {
     return (
       <form>
         <div>
@@ -17,4 +21,4 @@ export class LoginForm extends React.Component<{}, {}> {
   }
 }
 
-export default LoginForm;
+export { LoginForm };

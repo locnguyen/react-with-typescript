@@ -1,5 +1,9 @@
+/**
+ *
+ */
+
 import * as React from 'react';
 
-export const Home = () => <h1>Home</h1>;
+const Home: React.SFC = (): React.ReactElement<{}> => <h1>Home</h1>;
 
-export default Home;
+export { Home };
